@@ -1,6 +1,6 @@
 import { useLiveQuery } from "dexie-react-hooks";
 import React, { useEffect, useState } from "react";
-import { NavDropdown, Nav, Navbar } from 'react-bootstrap'
+import { NavDropdown, Nav, Navbar, } from 'react-bootstrap'
 import { Link } from "react-router-dom";
 import db from "../../app/db/db";
 import { ShoppingCartItem } from "./ShoppingCartItem";
@@ -41,7 +41,9 @@ export const ShoppingCart = () => {
             {productsCart?.map((product) => <ShoppingCartItem key={product.id} item={product} />)}
 
             <NavDropdown.Divider />
-            <NavDropdown.Item> Total:${ totalPrice } </NavDropdown.Item>
+            <NavDropdown.Item> 
+              <Link to={"/purchase"}> Total:${ totalPrice }</Link>
+            </NavDropdown.Item>
 
 
 

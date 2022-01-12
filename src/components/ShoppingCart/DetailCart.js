@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
-import { getAllProducts } from "../../app/services/productsCartServices";
+import { getAllProducts } from "../../app/services/productServices"
 
 export const DetailCart = () => {
   const [products, setProducts] = useState([]);
@@ -23,8 +23,8 @@ export const DetailCart = () => {
   }, []);
 
   return (
-    <Table striped bordered hover>
-      <thead>
+    <Table table table-dark>
+      <thead class="table table-striped table-dark">
         <tr>
           <th>#</th>
           <th>Title</th>
